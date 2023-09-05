@@ -1,11 +1,11 @@
 package piezas;
 
-public abstract class Piece {
+public abstract class PieceBase implements iRotator{
     protected int lado=0;
     protected int matriz [][] = new int [4][4];
     protected int posicion[][]=new int [10][20];
     
-    public Piece(){
+    public PieceBase(){
     }
     public int getValor(int pos1,int pos2){
         return matriz[pos1][pos2];
