@@ -4,7 +4,6 @@ public abstract class PieceBase implements iRotator{
     protected int lado=0;
     protected int matriz [][] = new int [4][4];
     protected int posicion[][]=new int [10][20];
-    
     public PieceBase(){
     }
     public int getValor(int pos1,int pos2){

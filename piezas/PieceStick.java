@@ -3,7 +3,7 @@ package piezas;
 public class PieceStick extends PieceBase {
     public PieceStick(){
         posiciones();
-        }
+    }
     private void posiciones(){
         setValor1(1, 0);
         setValor1(1, 1);

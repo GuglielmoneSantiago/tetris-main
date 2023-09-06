@@ -6,7 +6,6 @@ import static org.junit.Assert.assertNotNull;
 import org.junit.Test;
 
 import piezas.*;
-import Tetris;
 
 public class PieceTest {
    
