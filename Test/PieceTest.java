@@ -5,7 +5,7 @@ import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
 
-import piezas.*;
+import Objetos.piezas.*;
 
 public class PieceTest {
    
