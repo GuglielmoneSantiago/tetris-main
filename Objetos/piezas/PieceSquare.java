@@ -4,10 +4,10 @@ public class PieceSquare extends PieceBase {
         posiciones();
         }
     private void posiciones(){
-        setValor1(0, 0);
-        setValor1(0, 1);
-        setValor1(1, 1);
-        setValor1(1, 0);
+        setValor1Matriz(0, 0);
+        setValor1Matriz(0, 1);
+        setValor1Matriz(1, 1);
+        setValor1Matriz(1, 0);
         }
         @Override
         public void rotateLeft(){
@@ -22,10 +22,10 @@ public class PieceSquare extends PieceBase {
             reset();
             switch(lado){
                 case 0:
-                    setValor1(0, 0);
-                    setValor1(0, 1);
-                    setValor1(1, 1);
-                    setValor1(1, 0);
+                    setValor1Matriz(0, 0);
+                    setValor1Matriz(0, 1);
+                    setValor1Matriz(1, 1);
+                    setValor1Matriz(1, 0);
                     break;
             }
         }

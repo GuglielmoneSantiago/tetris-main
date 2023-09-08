@@ -5,10 +5,10 @@ public class PieceStick extends PieceBase {
         posiciones();
     }
     private void posiciones(){
-        setValor1(1, 0);
-        setValor1(1, 1);
-        setValor1(1, 2);
-        setValor1(1, 3);
+        setValor1Matriz(1, 0);
+        setValor1Matriz(1, 1);
+        setValor1Matriz(1, 2);
+        setValor1Matriz(1, 3);
     }
     @Override
     public void rotateLeft(){
@@ -31,16 +31,16 @@ public class PieceStick extends PieceBase {
     reset();
     switch(lado){
         case 0:
-            setValor1(1, 0);
-            setValor1(1, 1);
-            setValor1(1, 2);
-            setValor1(1, 3);
+            setValor1Matriz(1, 0);
+            setValor1Matriz(1, 1);
+            setValor1Matriz(1, 2);
+            setValor1Matriz(1, 3);
             break;
         case 1:
-            setValor1(0, 1);
-            setValor1(1, 1);
-            setValor1(2, 1);
-            setValor1(3, 1);
+            setValor1Matriz(0, 1);
+            setValor1Matriz(1, 1);
+            setValor1Matriz(2, 1);
+            setValor1Matriz(3, 1);
             break;
         }        
     }

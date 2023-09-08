@@ -4,10 +4,10 @@ public class PieceT extends PieceBase {
         posiciones();
         }
     private void posiciones(){
-        setValor1(1, 0);
-        setValor1(1, 1);
-        setValor1(1, 2);
-        setValor1(0, 1);
+        setValor1Matriz(1, 0);
+        setValor1Matriz(1, 1);
+        setValor1Matriz(1, 2);
+        setValor1Matriz(0, 1);
     }
 
     @Override
@@ -31,28 +31,28 @@ public class PieceT extends PieceBase {
         reset();
         switch(lado){
             case 0:
-                setValor1(1, 0);
-                setValor1(1, 1);
-                setValor1(1, 2);
-                setValor1(0, 1);
+                setValor1Matriz(1, 0);
+                setValor1Matriz(1, 1);
+                setValor1Matriz(1, 2);
+                setValor1Matriz(0, 1);
                 break;
             case 1:
-                setValor1(0, 1);
-                setValor1(1, 1);
-                setValor1(1, 2);
-                setValor1(2, 1);
+                setValor1Matriz(0, 1);
+                setValor1Matriz(1, 1);
+                setValor1Matriz(1, 2);
+                setValor1Matriz(2, 1);
                 break;
             case 2:
-                setValor1(1, 0);
-                setValor1(1, 1);
-                setValor1(1, 2);
-                setValor1(2, 1);
+                setValor1Matriz(1, 0);
+                setValor1Matriz(1, 1);
+                setValor1Matriz(1, 2);
+                setValor1Matriz(2, 1);
                 break;  
             case 3:
-                setValor1(0, 1);
-                setValor1(1, 1);
-                setValor1(1, 0);
-                setValor1(2, 1);
+                setValor1Matriz(0, 1);
+                setValor1Matriz(1, 1);
+                setValor1Matriz(1, 0);
+                setValor1Matriz(2, 1);
                 break; 
         }
     }
