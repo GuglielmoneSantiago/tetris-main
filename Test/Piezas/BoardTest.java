@@ -23,5 +23,4 @@ public class BoardTest {
             assertNotNull(p);
         }
     }
-    
 }

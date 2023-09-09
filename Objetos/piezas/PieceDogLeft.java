@@ -1,26 +1,28 @@
 package Objetos.piezas;
-public class PieceL extends PieceBase {
-    public PieceL(){
+
+public class PieceDogLeft extends PieceBase {
+    public PieceDogLeft(){
         lado= (int)(Math.random()*3);
         lados();
     }
-    
     @Override
     public void rotateLeft(){
         lado= lado-1;
         if (lado<0){
-            lado=3;
+            lado=1;
         }
         lados();
     }
+
     @Override
     public void rotateRight(){
         lado= lado+1;
-        if (lado>3){
+        if (lado>1){
             lado=0;
         }
         lados();
     }
+    
     @Override
     public void lados(){
         reset();
@@ -28,27 +30,17 @@ public class PieceL extends PieceBase {
             case 0:
                 setValor1Matriz(1, 0);
                 setValor1Matriz(1, 1);
-                setValor1Matriz(1, 2);
+                setValor1Matriz(2, 1);
                 setValor1Matriz(2, 2);
                 break;
             case 1:
                 setValor1Matriz(0, 1);
                 setValor1Matriz(1, 1);
-                setValor1Matriz(2, 1);
+                setValor1Matriz(1, 0);
                 setValor1Matriz(2, 0);
                 break;
-            case 2:
-                setValor1Matriz(0, 0);
-                setValor1Matriz(1, 0);
-                setValor1Matriz(1, 1);
-                setValor1Matriz(1, 2);
-                break;  
-            case 3:
-                setValor1Matriz(0, 1);
-                setValor1Matriz(0, 2);
-                setValor1Matriz(1, 1);
-                setValor1Matriz(2, 1);
-                break; 
         }
     }
+
+    
 }

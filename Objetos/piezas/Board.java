@@ -26,7 +26,7 @@ public class Board {
         int numero = (int)(Math.random()*10+1);
         switch(numero){
             case 1:
-                PieceDog piezaDog=new PieceDog();
+                PieceDogLeft piezaDog=new PieceDogLeft();
                 listaPiezas.add(piezaDog);
                 break;
             case 2:

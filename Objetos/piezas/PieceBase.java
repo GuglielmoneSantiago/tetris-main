@@ -13,7 +13,7 @@ public abstract class PieceBase implements iRotator{
         return posicion[posy][posx];
     }
     protected void setValor1Posicion(int posy,int posx){
-        matriz[posy][posx]=1;
+        posicion[posy][posx]=1;
     }
     protected void setValor1Matriz(int posy,int posx){
         matriz[posy][posx]=1;
@@ -41,13 +41,13 @@ public abstract class PieceBase implements iRotator{
                 if(getValorMatriz(y,x)==1){
                     int xx=posx+x;
                     int yy=posy+y;
-                    setValor1Posicion(yy,xx);
+                    setValor1Posicion(yy, xx);
                 }
             }
         }
     }
     public void completarParedIzquierda(){
-        for(int x=3;x>0;x--){
+        for(int x=0;x>3;x++){
             int marcador=0;
             for(int y=0;y<3;y++){
                 if(matriz[y][x]==1){
@@ -62,17 +62,17 @@ public abstract class PieceBase implements iRotator{
         }
     }
     public void completarParedDerecha(){
-        for(int x=3;x<3;x++){
+        for(int x=3;x>0;x--){
             int marcador=0;
-            for(int y=0;y<3;y++){
+            for(int y=0;y<4;y++){
                 if(matriz[y][x]==1){
                     marcador=1;
                 }
             }
             if(marcador==0){
-                for(int y=0;y<3;y++){
+                for(int y=0;y<4;y++){
                     setValor2Matriz(y, x);
-                }
+                } 
             }
         }
     }

@@ -1,16 +1,9 @@
 package Objetos.piezas;
 
-public class PieceDog extends PieceBase {
-    public PieceDog(){
-        posiciones();
-    }
-    
-    
-    private void posiciones(){
-        setValor1Matriz(1, 0);
-        setValor1Matriz(1, 1);
-        setValor1Matriz(2, 1);
-        setValor1Matriz(2, 2);
+public class PieceDogRight extends PieceBase {
+    public PieceDogRight(){
+        lado= (int)(Math.random()*3);
+        lados();
     }
     @Override
     public void rotateLeft(){
@@ -35,16 +28,16 @@ public class PieceDog extends PieceBase {
         reset();
         switch(lado){
             case 0:
-                setValor1Matriz(0, 1);
-                setValor1Matriz(1, 1);
-                setValor1Matriz(1, 0);
                 setValor1Matriz(2, 0);
+                setValor1Matriz(2, 1);
+                setValor1Matriz(1, 1);
+                setValor1Matriz(1, 2);
                 break;
             case 1:
-                setValor1Matriz(0, 1);
-                setValor1Matriz(1, 1);
+                setValor1Matriz(0, 0);
                 setValor1Matriz(1, 0);
-                setValor1Matriz(2, 0);
+                setValor1Matriz(1, 1);
+                setValor1Matriz(2, 1);
                 break;
         }
     }
