@@ -7,20 +7,24 @@ public class PieceDogLeft extends PieceBase {
     }
     @Override
     public void rotateLeft(){
-        lado= lado-1;
-        if (lado<0){
-            lado=1;
+        if(getValorMatriz(0, 2)!=2){
+            lado= lado-1;
+            if (lado<0){
+                lado=1;
+            }
+            lados();
         }
-        lados();
     }
 
     @Override
     public void rotateRight(){
-        lado= lado+1;
-        if (lado>1){
-            lado=0;
+        if(getValorMatriz(0, 2)!=2){
+            lado= lado+1;
+            if (lado>1){
+                lado=0;
+            }
+            lados();
         }
-        lados();
     }
     
     @Override

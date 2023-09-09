@@ -15,6 +15,7 @@ public class PieceL extends PieceBase {
     }
     @Override
     public void rotateRight(){
+        
         lado= lado+1;
         if (lado>3){
             lado=0;

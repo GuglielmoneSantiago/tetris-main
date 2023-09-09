@@ -9,6 +9,9 @@ public abstract class PieceBase implements iRotator{
     public int getValorMatriz(int posy,int posx){
         return matriz[posy][posx];
     }
+    public void setLado(int x){
+        lado=x;
+    }
     public int getValorPosicion(int posy,int posx){
         return posicion[posy][posx];
     }
