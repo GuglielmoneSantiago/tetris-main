@@ -35,12 +35,14 @@ public class PieceStick extends PieceBase {
             setValor1Matriz(1, 1);
             setValor1Matriz(1, 2);
             setValor1Matriz(1, 3);
+            verAltura();
             break;
         case 1:
             setValor1Matriz(0, 1);
             setValor1Matriz(1, 1);
             setValor1Matriz(2, 1);
             setValor1Matriz(3, 1);
+            verAltura();
             break;
         }        
     }

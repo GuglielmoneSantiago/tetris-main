@@ -4,6 +4,9 @@ public abstract class PieceBase implements iRotator{
     protected int lado=0;
     protected int matriz [][] = new int [4][4];
     protected int posicion[][]=new int [20][10];
+    public int posicionX=0;
+    public int posicionY=0;
+    public int altura=3;
     public PieceBase(){
     }
     public int getValorMatriz(int posy,int posx){
@@ -11,6 +14,15 @@ public abstract class PieceBase implements iRotator{
     }
     public void setLado(int x){
         lado=x;
+    }
+    public void verAltura(){
+        for(int y=0;y<4;y++){
+            for(int x=0;x<4;x++){
+                if(matriz[y][x]==1){
+                    altura=y;
+                }
+            }
+        }
     }
     public int getValorPosicion(int posy,int posx){
         return posicion[posy][posx];
@@ -27,7 +39,7 @@ public abstract class PieceBase implements iRotator{
     public void reset(){
         for (int y=0; y<4;y++){
             for (int x=0;x<4;x++){
-                matriz[y][x]=0;
+                matriz[y][x]=5;
             }
         }
     }
@@ -39,6 +51,9 @@ public abstract class PieceBase implements iRotator{
         }
     }
     public void establecerPosicion(int posx,int posy){
+        posicionX=posx;
+        posicionY=posy;
+        resetPosicion();
         for (int y=0; y<4;y++){
             for (int x=0;x<4;x++){
                 if(getValorMatriz(y,x)==1){

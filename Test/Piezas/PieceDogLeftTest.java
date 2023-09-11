@@ -58,4 +58,5 @@ public class PieceDogLeftTest {
         assertEquals( 1, p.getValorMatriz(1,0));
         assertEquals( 1, p.getValorMatriz(2,0));
     }
+    
 }
