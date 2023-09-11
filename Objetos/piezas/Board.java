@@ -49,15 +49,60 @@ public class Board {
         }
         return opcion;
     }
+    public void limpiarTablero(){
+        for(int y=0;y<20;y++){
+            boolean filaLlena=true;
+            for(int x=0;x<10;x++){
+                if(matriz[y][x]==1){
+                    filaLlena=false;
+                }
+            }
+            if(filaLlena==true){
+                for(int x=0;x<10;x++){
+                    matriz[y][x]=0;
+                }
+                int matriz2[][]=new int [20][10];
+                for(int ym2=0;ym2<20;ym2++){
+                    for(int xm2=0;xm2<10;xm2++){
+                        matriz2[ym2][xm2]=matriz[ym2][xm2];
+                    }
+                }
+                for(int yy=0;yy<(y+1);yy++){
+                    for(int x=0;x<10;x++){
+                        matriz[yy+1][x]=matriz2[yy][x];
+                    }
+                }       
+            }
+        }
+    }
 
     public void bajarFicha(){
         if(((piezaActiva.posicionY)+piezaActiva.altura)!=19){
             piezaActiva.posicionY=piezaActiva.posicionY+1;
             piezaActiva.establecerPosicion((piezaActiva.posicionX),(piezaActiva.posicionY));
             if(puedeBajar()==false){
-            piezaActiva.posicionY=piezaActiva.posicionY-1;
-            piezaActiva.establecerPosicion((piezaActiva.posicionX),(piezaActiva.posicionY));
+                piezaActiva.posicionY=piezaActiva.posicionY-1;
+                piezaActiva.establecerPosicion((piezaActiva.posicionX),(piezaActiva.posicionY));
+                for(int y=0;y<20;y++){
+                    for(int x=0;x<10;x++){
+                        if(piezaActiva.posicion[y][x]==1){
+                            matriz[y][x]=1;
+                        }
+                    }
+                }
+            limpiarTablero();
+            generarFichaAleatoria();
             }
+        }else{
+            for(int y=0;y<20;y++){
+                for(int x=0;x<10;x++){
+                    if(piezaActiva.posicion[y][x]==1){
+                        matriz[y][x]=1;
+                }
+                }
+            }
+            limpiarTablero();
+            generarFichaAleatoria();
         }
     }
     public void generarFichaAleatoria(){

@@ -3,14 +3,7 @@ public class PieceT extends PieceBase {
     public PieceT(){
         lado= (int)(Math.random()*3);
         lados();
-        posiciones();
         }
-    private void posiciones(){
-        setValor1Matriz(1, 0);
-        setValor1Matriz(1, 1);
-        setValor1Matriz(2, 1);
-        setValor1Matriz(0, 1);
-    }
     @Override
     public void rotateLeft(){
         lado= lado-1;
@@ -41,22 +34,21 @@ public class PieceT extends PieceBase {
             case 1:
                 setValor1Matriz(1, 0);
                 setValor1Matriz(1, 1);
-                setValor1Matriz(2, 1);
+                setValor1Matriz(0, 1);
                 setValor1Matriz(1, 2);
-                setValor1Matriz(2, 1);
                 altura=2;
                 break;
             case 2:
-                setValor1Matriz(1, 0);
-                setValor1Matriz(1, 1);
                 setValor1Matriz(0, 1);
-                setValor1Matriz(1, 2);
+                setValor1Matriz(1, 1);
                 setValor1Matriz(2, 1);
+                setValor1Matriz(1, 2);
                 altura=2;
                 break;  
             case 3:
-                setValor1Matriz(0, 1);
+                setValor1Matriz(1, 0);
                 setValor1Matriz(1, 1);
+                setValor1Matriz(1, 2);
                 setValor1Matriz(2, 1);
                 altura=2;
                 break; 
