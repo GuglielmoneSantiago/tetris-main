@@ -14,11 +14,7 @@ public class PieceStickTest {
         assertEquals( 1, p.getValorMatriz(1,1));
         assertEquals( 1, p.getValorMatriz(1,2));
         assertEquals( 1, p.getValorMatriz(1,3)); 
-       PieceStick p=new PieceStick();
-       assertEquals( 1, p.getValorMatriz(0,1));
-       assertEquals( 1, p.getValorMatriz(1,1));
-       assertEquals( 1, p.getValorMatriz(2,1));
-       assertEquals( 1, p.getValorMatriz(3,1)); 
+      
     }
     @Test
     public void insertar_FichaEnPosicion(){

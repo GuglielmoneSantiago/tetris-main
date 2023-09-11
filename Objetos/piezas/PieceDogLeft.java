@@ -46,19 +46,6 @@ public class PieceDogLeft extends PieceBase {
                 setValor1Matriz(2, 0);
                 altura=2;
                 break;
-            setValor1Matriz(0, 1);
-            setValor1Matriz(1, 1);
-            setValor1Matriz(1, 2);
-            setValor1Matriz(2, 2);
-            verAltura();
-            break;
-        case 1:
-            setValor1Matriz(1, 0);
-            setValor1Matriz(1, 1);
-            setValor1Matriz(0, 1);
-            setValor1Matriz(0, 2);
-            verAltura();
-            break;
           
         }
     }

@@ -52,17 +52,11 @@ public class PieceLTest {
          PieceL p=new PieceL();
          p.setLado(0);
          p.rotateLeft();
-         assertEquals( 1, p.getValorMatriz(1,0));
-         assertEquals( 1, p.getValorMatriz(2,0));
+         assertEquals( 1, p.getValorMatriz(0,1));
+         assertEquals( 1, p.getValorMatriz(0,2));
          assertEquals( 1, p.getValorMatriz(1,1));
-         assertEquals( 1, p.getValorMatriz(1,2));   
-        PieceL p=new PieceL();
-        p.setLado(0);
-        p.lados();
-        assertEquals( 1, p.getValorMatriz(1,0));
-        assertEquals( 1, p.getValorMatriz(1,1));
-        assertEquals( 1, p.getValorMatriz(1,2));
-        assertEquals( 1, p.getValorMatriz(2,2)); 
+         assertEquals( 1, p.getValorMatriz(2,1));   
+    
     }
 
 
