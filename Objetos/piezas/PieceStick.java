@@ -2,13 +2,8 @@ package Objetos.piezas;
 
 public class PieceStick extends PieceBase {
     public PieceStick(){
-        posiciones();
-    }
-    private void posiciones(){
-        setValor1Matriz(1, 0);
-        setValor1Matriz(1, 1);
-        setValor1Matriz(1, 2);
-        setValor1Matriz(1, 3);
+        lado= (int)(Math.random()*1);
+        lados();
     }
     @Override
     public void rotateLeft(){
@@ -35,14 +30,14 @@ public class PieceStick extends PieceBase {
             setValor1Matriz(1, 1);
             setValor1Matriz(1, 2);
             setValor1Matriz(1, 3);
-            verAltura();
+            altura=1;
             break;
         case 1:
             setValor1Matriz(0, 1);
             setValor1Matriz(1, 1);
             setValor1Matriz(2, 1);
             setValor1Matriz(3, 1);
-            verAltura();
+            altura=3;
             break;
         }        
     }

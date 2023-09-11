@@ -42,23 +42,22 @@ public class Board {
         boolean opcion=true;
         for(int y=0;y<20;y++){
             for(int x=0;x<10;x++){
-                if(matriz[y][x]==piezaActiva.matriz[y][x]){
+                if(matriz[y][x]==piezaActiva.posicion[y][x]){
                     opcion=false;
                 }
             }
-        }
-        if((piezaActiva.altura+16)==19){
-            opcion=false;
         }
         return opcion;
     }
 
     public void bajarFicha(){
-        piezaActiva.posicionY=piezaActiva.posicionY+1;
-        piezaActiva.establecerPosicion((piezaActiva.posicionX),(piezaActiva.posicionY));
-        if(puedeBajar()==false){
+        if(((piezaActiva.posicionY)+piezaActiva.altura)!=19){
+            piezaActiva.posicionY=piezaActiva.posicionY+1;
+            piezaActiva.establecerPosicion((piezaActiva.posicionX),(piezaActiva.posicionY));
+            if(puedeBajar()==false){
             piezaActiva.posicionY=piezaActiva.posicionY-1;
             piezaActiva.establecerPosicion((piezaActiva.posicionX),(piezaActiva.posicionY));
+            }
         }
     }
     public void generarFichaAleatoria(){

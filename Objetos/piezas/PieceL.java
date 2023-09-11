@@ -31,28 +31,28 @@ public class PieceL extends PieceBase {
                 setValor1Matriz(1, 1);
                 setValor1Matriz(1, 2);
                 setValor1Matriz(2, 2);
-                verAltura();
+                altura=2;
                 break;
             case 1:
                 setValor1Matriz(0, 1);
                 setValor1Matriz(1, 1);
                 setValor1Matriz(2, 1);
                 setValor1Matriz(2, 0);
-                verAltura();
+                altura=2;
                 break;
             case 2:
                 setValor1Matriz(0, 0);
                 setValor1Matriz(1, 0);
                 setValor1Matriz(1, 1);
                 setValor1Matriz(1, 2);
-                verAltura();
+                altura=1;
                 break;  
             case 3:
                 setValor1Matriz(0, 1);
                 setValor1Matriz(0, 2);
                 setValor1Matriz(1, 1);
                 setValor1Matriz(2, 1);
-                verAltura();
+                altura=2;
                 break; 
         }
     }

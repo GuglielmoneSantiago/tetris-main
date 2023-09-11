@@ -26,7 +26,7 @@ public class PieceSquare extends PieceBase {
                     setValor1Matriz(0, 1);
                     setValor1Matriz(1, 1);
                     setValor1Matriz(1, 0);
-                    verAltura();
+                    altura=1;
                     break;
             }
         }

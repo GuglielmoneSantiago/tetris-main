@@ -8,11 +8,13 @@ import Objetos.piezas.*;
 public class PieceDogLeftTest {
     @Test
     public void Crear_PiezaDog(){
-       PieceDogLeft p=new PieceDogLeft();
-       assertEquals( 1, p.getValorMatriz(1,0));
-       assertEquals( 1, p.getValorMatriz(1,1));
-       assertEquals( 1, p.getValorMatriz(2,1));
-       assertEquals( 1, p.getValorMatriz(2,2)); 
+        PieceDogLeft p=new PieceDogLeft();
+        p.setLado(0);
+        p.lados();
+        assertEquals( 1, p.getValorMatriz(1,0));
+        assertEquals( 1, p.getValorMatriz(1,1));
+        assertEquals( 1, p.getValorMatriz(2,1));
+        assertEquals( 1, p.getValorMatriz(2,2)); 
     }
     @Test
     public void insertar_FichaEnPosicion(){
