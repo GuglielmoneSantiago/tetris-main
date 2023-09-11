@@ -8,12 +8,13 @@ import Objetos.piezas.*;
 public class PieceDogLeftTest {
     @Test
     public void Crear_PiezaDog(){
-       PieceDogLeft p=new PieceDogLeft();
-       assertEquals( 1, p.getValorMatriz(1,0));
-       assertEquals( 1, p.getValorMatriz(1,1));
-       assertEquals( 1, p.getValorMatriz(2,1));
-       assertEquals( 1, p.getValorMatriz(2,2)); 
-    }
+        PieceDogLeft p=new PieceDogLeft();
+        assertEquals( 1, p.getValorMatriz(0,1));
+        assertEquals( 1, p.getValorMatriz(1,1));
+        assertEquals( 1, p.getValorMatriz(1,2));
+        assertEquals( 1, p.getValorMatriz(2,2)); 
+     }
+
     @Test
     public void insertar_FichaEnPosicion(){
         PieceDogLeft p=new PieceDogLeft();
@@ -21,9 +22,9 @@ public class PieceDogLeftTest {
         p.lados();
         p.resetPosicion();
         p.establecerPosicion(0, 0);
-        assertEquals( 1, p.getValorPosicion(1,0));
+        assertEquals( 1, p.getValorPosicion(0,1));
         assertEquals( 1, p.getValorPosicion(1,1));
-        assertEquals( 1, p.getValorPosicion(2,1));
+        assertEquals( 1, p.getValorPosicion(1,2));
         assertEquals( 1, p.getValorPosicion(2,2)); 
     }
 
@@ -38,15 +39,14 @@ public class PieceDogLeftTest {
         assertEquals( 2, p.getValorMatriz(3,3));
     }
     @Test
-    public void funcion_completarParedIzquierda(){
+    public void funcion_rotarIzquierda(){
         PieceDogLeft p=new PieceDogLeft();
         p.setLado(0);
-        p.lados();
-        p.completarParedIzquierda();
-        assertEquals( 0, p.getValorMatriz(0,0));
+        p.rotateLeft();
+        assertEquals( 1, p.getValorMatriz(0,1));
+        assertEquals( 1, p.getValorMatriz(1,1));
         assertEquals( 1, p.getValorMatriz(1,0));
-        assertEquals( 0, p.getValorMatriz(2,0));
-        assertEquals( 0, p.getValorMatriz(3,0));
+        assertEquals( 1, p.getValorMatriz(0,2));
     }
     @Test
     public void funcion_rotarDerecha(){
@@ -56,7 +56,7 @@ public class PieceDogLeftTest {
         assertEquals( 1, p.getValorMatriz(0,1));
         assertEquals( 1, p.getValorMatriz(1,1));
         assertEquals( 1, p.getValorMatriz(1,0));
-        assertEquals( 1, p.getValorMatriz(2,0));
+        assertEquals( 1, p.getValorMatriz(0,2));
     }
-    
 }
+    
