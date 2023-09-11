@@ -39,14 +39,14 @@ public abstract class PieceBase implements iRotator{
     public void reset(){
         for (int y=0; y<4;y++){
             for (int x=0;x<4;x++){
-                matriz[y][x]=5;
+                matriz[y][x]=0;
             }
         }
     }
     public void resetPosicion(){
         for (int y=0; y<20;y++){
             for (int x=0;x<10;x++){
-                posicion[y][x]=0;
+                posicion[y][x]=5;
             }
         }
     }
