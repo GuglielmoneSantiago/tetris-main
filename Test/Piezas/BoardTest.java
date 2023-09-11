@@ -33,14 +33,16 @@ public class BoardTest {
     @Test
     public void funcion_bajarFicha(){
         Board board=new Board();
-        PieceDogLeft piece=new PieceDogLeft();
-        piece.setLado(0);
+        PieceStick piece=new PieceStick();
+        piece.setLado(1);
         board.piezaActiva=piece;
         piece.establecerPosicion(0, 0);
-        board.bajarFicha();
-        assertEquals( 1, piece.getValorPosicion(2,0));
-        assertEquals( 1, piece.getValorPosicion(2,1));
-        assertEquals( 1, piece.getValorPosicion(3,1));
-        assertEquals( 1, piece.getValorPosicion(3,2)); 
+        for(int i=0;i<20;i++){
+            board.bajarFicha();
+        }
+        assertEquals( 1, piece.getValorPosicion(16,1));
+        assertEquals( 1, piece.getValorPosicion(17,1));
+        assertEquals( 1, piece.getValorPosicion(18,1));
+        assertEquals( 1, piece.getValorPosicion(19,1)); 
     }
 }

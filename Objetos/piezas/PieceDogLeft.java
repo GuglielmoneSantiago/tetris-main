@@ -2,7 +2,7 @@ package Objetos.piezas;
 
 public class PieceDogLeft extends PieceBase {
     public PieceDogLeft(){
-        lado= (int)(Math.random()*3);
+        lado= (int)(Math.random()*1);
         lados();
     }
     @Override
@@ -33,6 +33,19 @@ public class PieceDogLeft extends PieceBase {
         switch(lado){
 
             case 0:
+                setValor1Matriz(1, 0);
+                setValor1Matriz(1, 1);
+                setValor1Matriz(2, 1);
+                setValor1Matriz(2, 2);
+                altura=2;
+                break;
+            case 1:
+                setValor1Matriz(0, 1);
+                setValor1Matriz(1, 1);
+                setValor1Matriz(1, 0);
+                setValor1Matriz(2, 0);
+                altura=2;
+                break;
             setValor1Matriz(0, 1);
             setValor1Matriz(1, 1);
             setValor1Matriz(1, 2);

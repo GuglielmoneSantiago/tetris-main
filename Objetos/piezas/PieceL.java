@@ -27,34 +27,33 @@ public class PieceL extends PieceBase {
         reset();
         switch(lado){
             case 0:
-            setValor1Matriz(0, 1);
-            setValor1Matriz(1, 1);
-            setValor1Matriz(2, 1);
-            setValor1Matriz(2, 2);
-            verAltura();
-            break;
-        case 1:
-            setValor1Matriz(1, 0);
-            setValor1Matriz(1, 1);
-            setValor1Matriz(1, 2);
-            setValor1Matriz(0, 2);
-            verAltura();
-            break;
-        case 2:
-            setValor1Matriz(0, 0);
-            setValor1Matriz(0, 1);
-            setValor1Matriz(1, 1);
-            setValor1Matriz(2, 1);
-            verAltura();
-            break;  
-        case 3:
-            setValor1Matriz(1, 0);
-            setValor1Matriz(2, 0);
-            setValor1Matriz(1, 1);
-            setValor1Matriz(1, 2);
-            verAltura();
-            break; 
-        
+                setValor1Matriz(1, 0);
+                setValor1Matriz(1, 1);
+                setValor1Matriz(1, 2);
+                setValor1Matriz(2, 2);
+                altura=2;
+                break;
+            case 1:
+                setValor1Matriz(0, 1);
+                setValor1Matriz(1, 1);
+                setValor1Matriz(2, 1);
+                setValor1Matriz(2, 0);
+                altura=2;
+                break;
+            case 2:
+                setValor1Matriz(0, 0);
+                setValor1Matriz(1, 0);
+                setValor1Matriz(1, 1);
+                setValor1Matriz(1, 2);
+                altura=1;
+                break;  
+            case 3:
+                setValor1Matriz(0, 1);
+                setValor1Matriz(0, 2);
+                setValor1Matriz(1, 1);
+                setValor1Matriz(2, 1);
+                altura=2;
+                break; 
         }
     }
 }
