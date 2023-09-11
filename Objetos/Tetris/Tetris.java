@@ -3,26 +3,27 @@ package Objetos.Tetris;
 import Objetos.piezas.Board;
 
 public class Tetris {
-    Board b=new Board();
-    Clock c=new Clock();
+    Board boardT=new Board();
+    Clock clock=new Clock();
     public void start(){
-        b.generarFichaAleatoria();
+        boardT.generarFichaAleatoria();
     }
     public void rotateLeft(){
-        if(b.piezaActiva!=null){
-            b.piezaActiva.rotateLeft();
+        if(boardT.piezaActiva!=null){
+            boardT.piezaActiva.rotateLeft();
         }
     }
     public void rotateRight(){
-        if(b.piezaActiva!=null){
-            b.piezaActiva.rotateRight();
+        if(boardT.piezaActiva!=null){
+            boardT.piezaActiva.rotateRight();
         }
     }
     public void state(){
         
     }
     public void tick(){
-        c.tick();
-        b.bajarFicha();
+        clock.board=boardT;
+        clock.tick();
+        boardT.bajarFicha();
     }
 }
