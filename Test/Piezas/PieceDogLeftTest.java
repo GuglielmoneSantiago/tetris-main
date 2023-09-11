@@ -17,6 +17,8 @@ public class PieceDogLeftTest {
     @Test
     public void insertar_FichaEnPosicion(){
         PieceDogLeft p=new PieceDogLeft();
+        p.setLado(0);
+        p.lados();
         p.resetPosicion();
         p.establecerPosicion(0, 0);
         assertEquals( 1, p.getValorPosicion(1,0));
@@ -39,9 +41,10 @@ public class PieceDogLeftTest {
     public void funcion_completarParedIzquierda(){
         PieceDogLeft p=new PieceDogLeft();
         p.setLado(0);
+        p.lados();
         p.completarParedIzquierda();
         assertEquals( 0, p.getValorMatriz(0,0));
-        assertEquals( 0, p.getValorMatriz(1,0));
+        assertEquals( 1, p.getValorMatriz(1,0));
         assertEquals( 0, p.getValorMatriz(2,0));
         assertEquals( 0, p.getValorMatriz(3,0));
     }
