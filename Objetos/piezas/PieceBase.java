@@ -8,6 +8,7 @@ public abstract class PieceBase implements iRotator{
     public int posicionY=0;
     public int altura=3;
     public PieceBase(){
+        resetPosicion();
     }
     public int getValorMatriz(int posy,int posx){
         return matriz[posy][posx];

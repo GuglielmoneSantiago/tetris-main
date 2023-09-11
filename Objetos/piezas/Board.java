@@ -78,10 +78,11 @@ public class Board {
 
     public void bajarFicha(){
         if(((piezaActiva.posicionY)+piezaActiva.altura)!=19){
-            piezaActiva.posicionY=piezaActiva.posicionY+1;
+            piezaActiva.posicionY=(piezaActiva.posicionY+1);
             piezaActiva.establecerPosicion((piezaActiva.posicionX),(piezaActiva.posicionY));
             if(puedeBajar()==false){
                 piezaActiva.posicionY=piezaActiva.posicionY-1;
+                piezaActiva.resetPosicion();
                 piezaActiva.establecerPosicion((piezaActiva.posicionX),(piezaActiva.posicionY));
                 for(int y=0;y<20;y++){
                     for(int x=0;x<10;x++){
@@ -90,8 +91,6 @@ public class Board {
                         }
                     }
                 }
-            limpiarTablero();
-            generarFichaAleatoria();
             }
         }else{
             for(int y=0;y<20;y++){
@@ -101,8 +100,7 @@ public class Board {
                 }
                 }
             }
-            limpiarTablero();
-            generarFichaAleatoria();
+            
         }
     }
     public void generarFichaAleatoria(){
