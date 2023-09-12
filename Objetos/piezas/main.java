@@ -1,6 +1,8 @@
 package Objetos.piezas;
 
-public class main {
+import static org.junit.Assert.assertEquals;
+
+public class main { 
     public static void main(String[] args) {
     Board board=new Board();
     
@@ -19,6 +21,5 @@ public class main {
     board.piezaActiva.printBoard();
     System.out.print("  tablero1 \n");
     board.printBoard();
-    }
-    
+    } 
 }

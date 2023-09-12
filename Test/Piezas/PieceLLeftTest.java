@@ -59,6 +59,34 @@ public class PieceLLeftTest {
          assertEquals( 1, p.getValorMatriz(2,2));   
     
     }
+    @Test
+    public void entrar_piezaDerecha(){
+        PieceLLeft p= new PieceLLeft();
+        Board b=new Board();
+        b.piezaActiva=p;
+        b.insertarPieza();
+        b.piezaActiva.completarParedDerecha();
+        b.piezaActiva.establecerPosicion(9,0); 
+        assertEquals(1,b.getValor()); 
+
+    }
+
+        @Test
+    public void entrar_piezaIzquierda(){
+        PieceLLeft p= new PieceLLeft();
+        Board b=new Board();
+        b.piezaActiva=p;
+        b.insertarPieza();
+        b.piezaActiva.completarParedIzquierda();
+        b.piezaActiva.establecerPosicion(0,0); 
+        assertEquals(1,b.getValor());     
+    }
+
+
+
+
+
+
 
 
  }

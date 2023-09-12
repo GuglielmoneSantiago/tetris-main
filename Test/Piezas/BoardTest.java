@@ -108,4 +108,5 @@ public class BoardTest {
         assertEquals( 1, piece.getValorPosicion(19,2));
         assertEquals( 1, piece.getValorPosicion(19,3)); 
     }
+    
 }
