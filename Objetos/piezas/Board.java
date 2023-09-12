@@ -104,9 +104,17 @@ public class Board {
     }
 
     public void rotateLeft(){
+        for(int y=0;y<20;y++){
+            for(int x=0;x<10;x++){
+                if(piezaActiva.posicion[y][x]==1){
+                    matriz[y][x]=0;
+                }
+            }
+        }
         piezaActiva.rotateLeft();
         piezaActiva.resetPosicion();
         piezaActiva.establecerPosicion((piezaActiva.posicionX),(piezaActiva.posicionY));
+        
         if(puedeGirar()==false){
             piezaActiva.rotateRight();
             piezaActiva.resetPosicion();
@@ -131,11 +139,11 @@ public class Board {
         }
         //Bajar la ficha
         if(((piezaActiva.posicionY)+piezaActiva.altura)!=19){
-            piezaActiva.posicionY=(piezaActiva.posicionY+1);
+            piezaActiva.posicionY++;
             piezaActiva.resetPosicion();
             piezaActiva.establecerPosicion((piezaActiva.posicionX),(piezaActiva.posicionY));
             if(puedeBajar()==false){
-                piezaActiva.posicionY=piezaActiva.posicionY-1;
+                piezaActiva.posicionY--;
                 piezaActiva.resetPosicion();
                 piezaActiva.establecerPosicion((piezaActiva.posicionX),(piezaActiva.posicionY));
                 for(int y=0;y<20;y++){

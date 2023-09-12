@@ -44,7 +44,7 @@ public class PieceTTest {
         assertEquals( 1, p.getValorMatriz(1,1));
         assertEquals( 1, p.getValorMatriz(2,1));
         assertEquals( 1, p.getValorMatriz(1,2));   
-}
+    }
     @Test
     public void funcion_rotarIzquierda(){
         PieceT p=new PieceT();
@@ -55,15 +55,6 @@ public class PieceTTest {
         assertEquals( 1, p.getValorMatriz(1,2));
         assertEquals( 1, p.getValorMatriz(2,1));
 
-    
-}
-
-
-
-
-
-
-
-
+    }
 
 }

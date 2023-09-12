@@ -10,10 +10,10 @@ public class main {
     board.piezaActiva.setLado(1);
     board.piezaActiva.lados();
     board.insertarPieza();
-    for(int i=0;i<5;i++){
-        board.bajarFicha();;
-    }
+    board.bajarFicha();
     board.rotateLeft();
+    
+    
     // Inicializa y muestra la primera pieza
     System.out.print("  piezaActiva1 \n");
     board.piezaActiva.printBoard();
