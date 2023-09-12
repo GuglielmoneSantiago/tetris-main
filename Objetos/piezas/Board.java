@@ -173,7 +173,7 @@ public class Board {
             
         }
     }
-    public void generarFichaAleatoria(){
+    public void generarFichaAleatoria(){ 
         int numero = (int)(Math.random()*5+1);
         switch(numero){
             case 1:
@@ -196,6 +196,11 @@ public class Board {
                 PieceT piezaT=new PieceT();
                 piezaActiva=piezaT;
                 break;
+            case 6:
+                PieceDogRight piezaDog2=new PieceDogRight();
+                piezaActiva=piezaDog2;
+                break;
+
         }
     }
 
