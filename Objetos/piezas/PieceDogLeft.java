@@ -31,7 +31,6 @@ public class PieceDogLeft extends PieceBase {
     public void lados(){
         reset();
         switch(lado){
-
             case 0:
                 setValor1Matriz(1, 0);
                 setValor1Matriz(1, 1);

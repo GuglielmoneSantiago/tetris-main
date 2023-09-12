@@ -9,7 +9,6 @@ public class Board {
     public int getValor(int posy,int posx){
         return matriz[posy][posx];
     }
-
     protected void setValor1(int posy,int posx){
         matriz[posy][posx]=1;
     }
@@ -75,15 +74,78 @@ public class Board {
             }
         }
     }
+    public boolean puedeGirar(){
+        boolean opcion=true;
+        for(int y=0;y<20;y++){
+            for(int x=0;x<10;x++){
+                if(matriz[y][x]==piezaActiva.posicion[y][x]){
+                    opcion=false;
+                }
+            }
+        }
+        return opcion;
+    }
+    public void rotateRight(){
+        piezaActiva.rotateRight();
+        piezaActiva.resetPosicion();
+        piezaActiva.establecerPosicion((piezaActiva.posicionX),(piezaActiva.posicionY));
+        if(puedeGirar()==false){
+            piezaActiva.rotateLeft();
+            piezaActiva.resetPosicion();
+            piezaActiva.establecerPosicion((piezaActiva.posicionX),(piezaActiva.posicionY));
+        }
+        for(int y=0;y<20;y++){
+            for(int x=0;x<10;x++){
+                if(piezaActiva.posicion[y][x]==1){
+                    matriz[y][x]=1;
+                }
+            }
+        }
+    }
 
+    public void rotateLeft(){
+        piezaActiva.rotateLeft();
+        piezaActiva.resetPosicion();
+        piezaActiva.establecerPosicion((piezaActiva.posicionX),(piezaActiva.posicionY));
+        if(puedeGirar()==false){
+            piezaActiva.rotateRight();
+            piezaActiva.resetPosicion();
+            piezaActiva.establecerPosicion((piezaActiva.posicionX),(piezaActiva.posicionY));
+        }
+        for(int y=0;y<20;y++){
+            for(int x=0;x<10;x++){
+                if(piezaActiva.posicion[y][x]==1){
+                    matriz[y][x]=1;
+                }
+            }
+        }
+    }
     public void bajarFicha(){
+        //Limpiar Donde esta el objeto
+        for(int y=0;y<20;y++){
+            for(int x=0;x<10;x++){
+                if(piezaActiva.posicion[y][x]==1){
+                    matriz[y][x]=0;
+                }
+            }
+        }
+        //Bajar la ficha
         if(((piezaActiva.posicionY)+piezaActiva.altura)!=19){
             piezaActiva.posicionY=(piezaActiva.posicionY+1);
+            piezaActiva.resetPosicion();
             piezaActiva.establecerPosicion((piezaActiva.posicionX),(piezaActiva.posicionY));
             if(puedeBajar()==false){
                 piezaActiva.posicionY=piezaActiva.posicionY-1;
                 piezaActiva.resetPosicion();
                 piezaActiva.establecerPosicion((piezaActiva.posicionX),(piezaActiva.posicionY));
+                for(int y=0;y<20;y++){
+                    for(int x=0;x<10;x++){
+                        if(piezaActiva.posicion[y][x]==1){
+                            matriz[y][x]=1;
+                        }
+                    }
+                }
+            }else{
                 for(int y=0;y<20;y++){
                     for(int x=0;x<10;x++){
                         if(piezaActiva.posicion[y][x]==1){

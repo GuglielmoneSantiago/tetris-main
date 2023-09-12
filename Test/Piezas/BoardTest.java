@@ -34,6 +34,66 @@ public class BoardTest {
         }
     }
     @Test
+    public void funcion_rotarIzquierda_meterFicha(){
+        Board b=new Board();
+        PieceStick p=new PieceStick();
+        b.piezaActiva=p;
+        p.setLado(1);
+        p.lados();
+        b.insertarPieza();
+        b.piezaActiva.establecerPosicion(0,0);
+        assertEquals( 1, p.getValorMatriz(0,1));
+        assertEquals( 1, p.getValorMatriz(1,1));
+        assertEquals( 1, p.getValorMatriz(2,1));
+        assertEquals( 1, p.getValorMatriz(3,1));
+        assertEquals( 1, p.getValorPosicion(0,1));
+        assertEquals( 1, p.getValorPosicion(1,1));
+        assertEquals( 1, p.getValorPosicion(2,1));
+        assertEquals( 1, p.getValorPosicion(3,1));
+        b.rotateLeft();
+        //ficha
+        assertEquals( 1, p.getValorPosicion(1,0));
+        assertEquals( 1, p.getValorPosicion(1,1));
+        assertEquals( 1, p.getValorPosicion(1,2));
+        assertEquals( 1, p.getValorPosicion(1,3));
+        //tablero
+        assertEquals( 1, b.getValor(1,0));
+        assertEquals( 1, b.getValor(1,1));
+        assertEquals( 1, b.getValor(1,2));
+        assertEquals( 1, b.getValor(1,3));
+         
+    }
+    @Test
+    public void funcion_rotarDerecha_meterFicha(){
+        Board b=new Board();
+        PieceStick p=new PieceStick();
+        b.piezaActiva=p;
+        p.setLado(1);
+        p.lados();
+        b.insertarPieza();
+        b.piezaActiva.establecerPosicion(0,0);
+        assertEquals( 1, p.getValorMatriz(0,1));
+        assertEquals( 1, p.getValorMatriz(1,1));
+        assertEquals( 1, p.getValorMatriz(2,1));
+        assertEquals( 1, p.getValorMatriz(3,1));
+        assertEquals( 1, p.getValorPosicion(0,1));
+        assertEquals( 1, p.getValorPosicion(1,1));
+        assertEquals( 1, p.getValorPosicion(2,1));
+        assertEquals( 1, p.getValorPosicion(3,1));
+        b.rotateRight();
+        //ficha
+        assertEquals( 1, p.getValorPosicion(1,0));
+        assertEquals( 1, p.getValorPosicion(1,1));
+        assertEquals( 1, p.getValorPosicion(1,2));
+        assertEquals( 1, p.getValorPosicion(1,3));
+        //tablero
+        assertEquals( 1, b.getValor(1,0));
+        assertEquals( 1, b.getValor(1,1));
+        assertEquals( 1, b.getValor(1,2));
+        assertEquals( 1, b.getValor(1,3));
+         
+    }
+    @Test
     public void funcion_bajarFich(){
         Board board=new Board();
         PieceStick piece=new PieceStick();

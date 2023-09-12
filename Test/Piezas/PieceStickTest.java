@@ -38,7 +38,7 @@ public class PieceStickTest {
         assertEquals( 1, p.getValorMatriz(2,1));
         assertEquals( 1, p.getValorMatriz(3,1));
     }
- @Test
+    @Test
     public void funcion_rotarIzquierda(){
         PieceStick p=new PieceStick();
         p.setLado(0);
@@ -48,10 +48,4 @@ public class PieceStickTest {
         assertEquals( 1, p.getValorMatriz(2,1));
         assertEquals( 1, p.getValorMatriz(3,1));
     }
-
-
-
-
-
-
 }
