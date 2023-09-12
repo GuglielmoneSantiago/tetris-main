@@ -65,19 +65,19 @@ public abstract class PieceBase implements iRotator{
         resetPosicion();
         //Verificar que no se salga
         if(posicionX>6){
-            if(matriz[0][3]==2){
+            if(matriz[0][2]==2){
                 switch(posicionX){
-                    case 8:
+                    case 9:
                         posicionX=posicionX-1;
                         break;
-                    case 9:
-                        posicionX=posicionX-2;
-                        break;
                 }
-            }else{if(matriz[0][2]==2){
+            }else{if(matriz[0][3]==2){
                     switch(posicionX){
-                        case 9:
+                        case 8:
                             posicionX--;
+                            break;
+                        case 9:
+                            posicionX=posicionX-2;
                             break;
                     }
                 }else{
@@ -101,28 +101,38 @@ public abstract class PieceBase implements iRotator{
             for (int y=0; y<4;y++){
                 for (int x=1;x<4;x++){
                     if(getValorMatriz(y,x)==1){
-                        int xx=posx+x-1;
-                        int yy=posy+y;
+                        int xx=posicionX+x-1;
+                        int yy=posicionY+y;
                         setValor1Posicion(yy, xx);
                     }
                 }
             }
-        }else{if(matriz[0][3]==2){
+        }else{if(matriz[0][3]==2){if(matriz[0][2]==2){
+            for (int y=0; y<4;y++){
+                for (int x=1;x>=0;x--){
+                    if(getValorMatriz(y,x)==1){
+                        int xx=posicionX+x;
+                        int yy=posicionY+y;
+                        setValor1Posicion(yy, xx);
+                    }
+                }
+            }}else{
             for (int y=0; y<4;y++){
                 for (int x=2;x>=0;x--){
                     if(getValorMatriz(y,x)==1){
-                        int xx=posx+x-1;
-                        int yy=posy+y;
+                        int xx=posicionX+x;
+                        int yy=posicionY+y;
                         setValor1Posicion(yy, xx);
                     }
                 }
-            }
-        }else{
+            }}
+        }else{System.out.print(posx);
             for (int y=0; y<4;y++){
                 for (int x=0;x<4;x++){
                     if(getValorMatriz(y,x)==1){
-                        int xx=posx+x;
-                        int yy=posy+y;
+                        int xx=posicionX+x;
+                        int yy=posicionY+y;
+                        
                         setValor1Posicion(yy, xx);
                     }
                 }

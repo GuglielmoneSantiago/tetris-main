@@ -2,7 +2,7 @@ package Objetos.piezas;
 
 public class PieceStick extends PieceBase {
     public PieceStick(){
-        lado= (int)(Math.random()*1);
+        lado= ((int)(Math.random()*2));
         lados();
     }
     @Override
