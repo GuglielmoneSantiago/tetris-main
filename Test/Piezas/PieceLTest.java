@@ -11,7 +11,7 @@ public class PieceLTest {
         assertEquals( 1, p.getValorMatriz(1,0));
         assertEquals( 1, p.getValorMatriz(1,1));
         assertEquals( 1, p.getValorMatriz(1,2));
-        assertEquals( 1, p.getValorMatriz(2,2));
+        assertEquals( 1, p.getValorMatriz(1,2));
      }
      @Test
      public void insertar_FichaEnPosicion(){
