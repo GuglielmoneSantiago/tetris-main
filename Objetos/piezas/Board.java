@@ -1,5 +1,7 @@
 package Objetos.piezas;
 
+import java.util.Arrays;
+
 public class Board {
     public int matriz[][]=new int [20][10];
     public PieceBase piezaActiva;
@@ -48,29 +50,29 @@ public class Board {
         }
         return opcion;
     }
-    public void limpiarTablero(){
-        for(int y=0;y<20;y++){
-            boolean filaLlena=true;
-            for(int x=0;x<10;x++){
-                if(matriz[y][x]==1){
-                    filaLlena=false;
+    public void borrarFilaLlena() {
+        for (int fila = matriz.length - 1; fila >= 0; fila--) {
+
+            boolean filaLlena = true;
+
+            // Verifica si todos los elementos de la fila son "1"
+            for (int col = 0; col < matriz[fila].length; col++) {
+                if (matriz[fila][col] != 1) {
+                    filaLlena = false;
+                    break;
                 }
             }
-            if(filaLlena==true){
-                for(int x=0;x<10;x++){
-                    matriz[y][x]=0;
+
+            // Si la fila está llena, borra la fila moviendo las filas por encima hacia abajo
+            if (filaLlena) {
+                for (int i = fila; i > 0; i--) {
+                    // Copia la fila de arriba en la fila actual
+                    System.arraycopy(matriz[i - 1], 0, matriz[i], 0, matriz[i].length);
                 }
-                int matriz2[][]=new int [20][10];
-                for(int ym2=0;ym2<20;ym2++){
-                    for(int xm2=0;xm2<10;xm2++){
-                        matriz2[ym2][xm2]=matriz[ym2][xm2];
-                    }
-                }
-                for(int yy=0;yy<(y+1);yy++){
-                    for(int x=0;x<10;x++){
-                        matriz[yy+1][x]=matriz2[yy][x];
-                    }
-                }       
+
+                // Establece la fila superior como una fila vacía
+                Arrays.fill(matriz[0], 0);
+                fila++; // Revisa la fila actual nuevamente, ya que ahora contiene las filas de arriba
             }
         }
     }

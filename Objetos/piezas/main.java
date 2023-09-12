@@ -10,9 +10,9 @@ public class main {
     board.piezaActiva.setLado(1);
     board.piezaActiva.lados();
     board.piezaActiva.completarParedDerecha();
-    board.piezaActiva.establecerPosicion(5,0);
+    board.piezaActiva.establecerPosicion(9,0);
     
-    System.out.print(board.piezaActiva.posicionX);
+    
     
     // Inicializa y muestra la primera pieza
     System.out.print("  piezaActiva1 \n");
