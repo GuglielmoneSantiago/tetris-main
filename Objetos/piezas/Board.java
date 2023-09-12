@@ -183,7 +183,7 @@ public class Board {
                 piezaActiva=piezaDog;
                 break;
             case 2:
-                PieceL piezaL=new PieceL();
+                PieceLRight piezaL=new PieceLRight();
                 piezaActiva=piezaL;
                 break;
             case 3:
