@@ -7,15 +7,16 @@ public class Tetris {
     Clock clock=new Clock();
     public void start(){
         boardT.generarFichaAleatoria();
+        boardT.insertarPieza();
     }
     public void rotateLeft(){
         if(boardT.piezaActiva!=null){
-            boardT.piezaActiva.rotateLeft();
+            boardT.rotateLeft();
         }
     }
     public void rotateRight(){
         if(boardT.piezaActiva!=null){
-            boardT.piezaActiva.rotateRight();
+            boardT.rotateRight();;
         }
     }
     public void state(){
@@ -24,6 +25,5 @@ public class Tetris {
     public void tick(){
         clock.board=boardT;
         clock.tick();
-        boardT.bajarFicha();
     }
 }
