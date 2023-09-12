@@ -7,7 +7,7 @@ import Objetos.piezas.*;
 public class PieceLTest {
     @Test
     public void Crear_PiezaL(){
-        PieceL p=new PieceL();
+        PieceLRight p=new PieceLRight();
         assertEquals( 1, p.getValorMatriz(1,0));
         assertEquals( 1, p.getValorMatriz(1,1));
         assertEquals( 1, p.getValorMatriz(1,2));
@@ -15,7 +15,7 @@ public class PieceLTest {
      }
      @Test
      public void insertar_FichaEnPosicion(){
-         PieceL p = new PieceL();
+         PieceLRight p = new PieceLRight();
          p.setLado(0);
          p.lados();
          p.resetPosicion();
@@ -28,7 +28,7 @@ public class PieceLTest {
  
      @Test
      public void funcion_completarParedDerecha(){
-         PieceL p=new PieceL();
+         PieceLRight p=new PieceLRight();
          p.setLado(0);
          p.completarParedDerecha();
          assertEquals( 2, p.getValorMatriz(0,3));
@@ -39,7 +39,7 @@ public class PieceLTest {
  
      @Test
      public void funcion_rotarDerecha(){  //funcion rotar derececha case 1
-         PieceL p=new PieceL();
+         PieceLRight p=new PieceLRight();
          p.setLado(0);
          p.rotateRight();
          assertEquals( 1, p.getValorMatriz(0,1));
@@ -49,7 +49,7 @@ public class PieceLTest {
     }
    @Test
      public void funcion_rotarIzquierda(){   //funcion rotar izquierda case 3
-         PieceL p=new PieceL();
+         PieceLRight p=new PieceLRight();
          p.setLado(0);
          p.rotateLeft();
          assertEquals( 1, p.getValorMatriz(0,1));

@@ -1,6 +1,6 @@
 package Objetos.piezas;
-public class PieceL extends PieceBase {
-    public PieceL(){
+public class PieceLRight extends PieceBase {
+    public PieceLRight(){
         lado= (int)(Math.random()*3);
         lados();
     }
