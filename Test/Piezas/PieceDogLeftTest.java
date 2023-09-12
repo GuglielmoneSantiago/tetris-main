@@ -23,9 +23,9 @@ public class PieceDogLeftTest {
         p.lados();
         p.resetPosicion();
         p.establecerPosicion(0, 0);
-        assertEquals( 1, p.getValorPosicion(0,1));
+        assertEquals( 1, p.getValorPosicion(1,0));
         assertEquals( 1, p.getValorPosicion(1,1));
-        assertEquals( 1, p.getValorPosicion(1,2));
+        assertEquals( 1, p.getValorPosicion(2,1));
         assertEquals( 1, p.getValorPosicion(2,2)); 
     }
 
@@ -47,7 +47,7 @@ public class PieceDogLeftTest {
         assertEquals( 1, p.getValorMatriz(0,1));
         assertEquals( 1, p.getValorMatriz(1,1));
         assertEquals( 1, p.getValorMatriz(1,0));
-        assertEquals( 1, p.getValorMatriz(0,2));
+        assertEquals( 1, p.getValorMatriz(2,0));
     }
     @Test
     public void funcion_rotarDerecha(){
@@ -57,7 +57,7 @@ public class PieceDogLeftTest {
         assertEquals( 1, p.getValorMatriz(0,1));
         assertEquals( 1, p.getValorMatriz(1,1));
         assertEquals( 1, p.getValorMatriz(1,0));
-        assertEquals( 1, p.getValorMatriz(0,2));
+        assertEquals( 1, p.getValorMatriz(2,0));
     }
 }
     

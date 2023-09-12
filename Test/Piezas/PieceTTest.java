@@ -8,10 +8,10 @@ public class PieceTTest {
     @Test
     public void Crear_PiezaT(){
        PieceT p=new PieceT();
-       assertEquals( 1, p.getValorMatriz(1,0));
        assertEquals( 1, p.getValorMatriz(1,1));
-       assertEquals( 1, p.getValorMatriz(2,1));
-       assertEquals( 1, p.getValorMatriz(0,1)); 
+       assertEquals( 1, p.getValorMatriz(1,1));
+       assertEquals( 1, p.getValorMatriz(1,2));
+       assertEquals( 1, p.getValorMatriz(1,1)); 
     }
     @Test
     public void insertar_FichaEnPosicion(){
@@ -20,10 +20,10 @@ public class PieceTTest {
         p.lados();
         p.resetPosicion();
         p.establecerPosicion(0, 0);
-       assertEquals( 1, p.getValorMatriz(1,0));
+       assertEquals( 1, p.getValorMatriz(0,1));
        assertEquals( 1, p.getValorMatriz(1,1));
-       assertEquals( 1, p.getValorMatriz(2,1));
-       assertEquals( 1, p.getValorMatriz(0,1)); 
+       assertEquals( 1, p.getValorMatriz(1,2));
+       assertEquals( 1, p.getValorMatriz(1,0)); 
     }
     @Test
     public void funcion_completarParedDerecha(){
@@ -50,10 +50,10 @@ public class PieceTTest {
         PieceT p=new PieceT();
         p.setLado(0);
         p.rotateLeft();
-        assertEquals( 1, p.getValorMatriz(0,1));
         assertEquals( 1, p.getValorMatriz(1,1));
-        assertEquals( 1, p.getValorMatriz(2,1));
+        assertEquals( 1, p.getValorMatriz(1,1));
         assertEquals( 1, p.getValorMatriz(1,2));
+        assertEquals( 1, p.getValorMatriz(2,1));
 
     
 }

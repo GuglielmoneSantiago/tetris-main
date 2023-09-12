@@ -10,10 +10,10 @@ public class PieceDogRightTest{
     @Test
     public void Crear_PiezaDog(){
        PieceDogRight p=new PieceDogRight();
-       assertEquals( 1, p.getValorMatriz(0,2));
-       assertEquals( 1, p.getValorMatriz(1,2));
+       assertEquals( 1, p.getValorMatriz(2,0));
+       assertEquals( 1, p.getValorMatriz(2,1));
        assertEquals( 1, p.getValorMatriz(1,1));
-       assertEquals( 1, p.getValorMatriz(2,1)); 
+       assertEquals( 1, p.getValorMatriz(1,2)); 
     }
     @Test
     public void insertar_FichaEnPosicion(){
@@ -22,10 +22,10 @@ public class PieceDogRightTest{
         p.lados();
         p.resetPosicion();
         p.establecerPosicion(0, 0);
-        assertEquals( 1, p.getValorPosicion(0,2));
-        assertEquals( 1, p.getValorPosicion(1,2));
+        assertEquals( 1, p.getValorPosicion(2,0));
+        assertEquals( 1, p.getValorPosicion(2,1));
         assertEquals( 1, p.getValorPosicion(1,1));
-        assertEquals( 1, p.getValorPosicion(2,1)); 
+        assertEquals( 1, p.getValorPosicion(1,2)); 
     }
 
     @Test
@@ -44,9 +44,9 @@ public class PieceDogRightTest{
         p.setLado(0);
         p.rotateRight();
         assertEquals( 1, p.getValorMatriz(0,0));
-        assertEquals( 1, p.getValorMatriz(0,1));
+        assertEquals( 1, p.getValorMatriz(1,0));
         assertEquals( 1, p.getValorMatriz(1,1));
-        assertEquals( 1, p.getValorMatriz(1,2));   
+        assertEquals( 1, p.getValorMatriz(2,1));   
 }
     @Test
     public void funcion_rotarIzquierda(){
@@ -54,9 +54,9 @@ public class PieceDogRightTest{
         p.setLado(0);
         p.rotateLeft();
         assertEquals( 1, p.getValorMatriz(0,0));
-        assertEquals( 1, p.getValorMatriz(0,1));
+        assertEquals( 1, p.getValorMatriz(1,0));
         assertEquals( 1, p.getValorMatriz(1,1));
-        assertEquals( 1, p.getValorMatriz(1,2));   
+        assertEquals( 1, p.getValorMatriz(2,1));   
 }
 
 
