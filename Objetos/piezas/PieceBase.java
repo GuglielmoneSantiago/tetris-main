@@ -63,26 +63,83 @@ public abstract class PieceBase implements iRotator{
         posicionX=posx;
         posicionY=posy;
         resetPosicion();
-        for (int y=0; y<4;y++){
-            for (int x=0;x<4;x++){
-                if(getValorMatriz(y,x)==1){
-                    int xx=posx+x;
-                    int yy=posy+y;
-                    setValor1Posicion(yy, xx);
+        //Verificar que no se salga
+        if(posicionX>6){
+            if(matriz[0][3]==2){
+                switch(posicionX){
+                    case 8:
+                        posicionX=posicionX-1;
+                        break;
+                    case 9:
+                        posicionX=posicionX-2;
+                        break;
+                }
+            }else{if(matriz[0][2]==2){
+                    switch(posicionX){
+                        case 9:
+                            posicionX--;
+                            break;
+                    }
+                }else{
+                    switch(posicionX){
+                        case 7:
+                            posicionX--;
+                            break;
+                        case 8:
+                            posicionX=posicionX-2;
+                            break;
+                        case 9:
+                            posicionX=posicionX-3;
+                            break;
+                    }
                 }
             }
         }
+        //InsertarPieza
+         
+        if(matriz[0][0]==2){
+            for (int y=0; y<4;y++){
+                for (int x=1;x<4;x++){
+                    if(getValorMatriz(y,x)==1){
+                        int xx=posx+x-1;
+                        int yy=posy+y;
+                        setValor1Posicion(yy, xx);
+                    }
+                }
+            }
+        }else{if(matriz[0][3]==2){
+            for (int y=0; y<4;y++){
+                for (int x=2;x>=0;x--){
+                    if(getValorMatriz(y,x)==1){
+                        int xx=posx+x-1;
+                        int yy=posy+y;
+                        setValor1Posicion(yy, xx);
+                    }
+                }
+            }
+        }else{
+            for (int y=0; y<4;y++){
+                for (int x=0;x<4;x++){
+                    if(getValorMatriz(y,x)==1){
+                        int xx=posx+x;
+                        int yy=posy+y;
+                        setValor1Posicion(yy, xx);
+                    }
+                }
+            }
+        }
+        }
     }
     public void completarParedIzquierda(){
-        for(int x=0;x>3;x++){
+        for(int x=0;x<4;x++){
             int marcador=0;
-            for(int y=0;y<3;y++){
+            for(int y=0;y<4;y++){
                 if(matriz[y][x]==1){
                     marcador=1;
                 }
             }
             if(marcador==0){
-                for(int y=0;y<3;y++){
+                for(int y=0;y<4;y++){
                     setValor2Matriz(y, x);
                 }
             }
