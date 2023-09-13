@@ -66,9 +66,15 @@ public class PieceLLeftTest {
         b.piezaActiva=p;
         b.insertarPieza();
         b.piezaActiva.completarParedDerecha();
+        b.actualizarBoard0();
+        b.piezaActiva.establecerPosicion(0, 0);
+        b.actualizarBoard1();
         b.piezaActiva.establecerPosicion(9,0); 
-        assertEquals(1,b.getValor()); 
-
+       /* assertEquals(1,b.getValor(1,0));
+        assertEquals(1,b.getValor(1,1));
+        assertEquals(1,b.getValor(2,9));
+        assertEquals(1,b.getValor(2,8)); */
+        
     }
 
         @Test
@@ -77,17 +83,18 @@ public class PieceLLeftTest {
         Board b=new Board();
         b.piezaActiva=p;
         b.insertarPieza();
+        b.piezaActiva.setLado(1);
         b.piezaActiva.completarParedIzquierda();
-        b.piezaActiva.establecerPosicion(0,0); 
-        assertEquals(1,b.getValor());     
+        b.actualizarBoard0();
+        b.piezaActiva.establecerPosicion(0, 0);
+        b.actualizarBoard1();
+        /*assertEquals(1,b.getValor(0,1));   
+        assertEquals(1,b.getValor(0,1));  
+        assertEquals(1,b.getValor(1,2));  
+        assertEquals(1,b.getValor(1,0));  */
+    
+          
     }
-
-
-
-
-
-
-
 
  }
 

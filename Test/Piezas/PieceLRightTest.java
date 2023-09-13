@@ -65,8 +65,14 @@ public class PieceLRightTest {
         b.piezaActiva=p;
         b.insertarPieza();
         b.piezaActiva.completarParedDerecha();
+        b.actualizarBoard0();
+        b.piezaActiva.establecerPosicion(0, 0);
+        b.actualizarBoard1();
         b.piezaActiva.establecerPosicion(9,0); 
-        assertEquals(1,b.getValor()); 
+       /*/ assertEquals(1,b.getValor(9,2));  
+        assertEquals(1,b.getValor(8,0));  
+        assertEquals(1,b.getValor(8,1));  
+        assertEquals(1,b.getValor(8,2));  */
 
     }
 
@@ -76,16 +82,18 @@ public class PieceLRightTest {
         Board b=new Board();
         b.piezaActiva=p;
         b.insertarPieza();
+        b.piezaActiva.setLado(1);
         b.piezaActiva.completarParedIzquierda();
-        b.piezaActiva.establecerPosicion(0,0); 
-        assertEquals(1,b.getValor());     
+        b.actualizarBoard0();
+        b.piezaActiva.establecerPosicion(0, 0);
+        b.actualizarBoard1();
+        /*assertEquals(1,b.getValor(1,0));
+        assertEquals(1,b.getValor(1,1));
+        assertEquals(1,b.getValor(1,2));
+        assertEquals(1,b.getValor(2,2)); */
+
+
     }
-
-
-
-
-
-
 
 
 

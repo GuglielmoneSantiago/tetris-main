@@ -23,6 +23,7 @@ public class PieceSquare extends PieceBase {
                 altura=1;
                 break;
             }
+
         }
 
 }

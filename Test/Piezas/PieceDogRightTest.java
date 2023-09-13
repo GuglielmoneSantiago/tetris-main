@@ -66,8 +66,14 @@ public void entrar_piezaDerecha(){
     b.piezaActiva=p;
     b.insertarPieza();
     b.piezaActiva.completarParedDerecha();
-    b.piezaActiva.establecerPosicion(9,0); 
-    assertEquals(1,b.getValor()); 
+    b.actualizarBoard0();
+        b.piezaActiva.establecerPosicion(0, 0);
+        b.actualizarBoard1();
+        b.piezaActiva.establecerPosicion(9,0); 
+        assertEquals(1,b.getValor(2,0));
+        assertEquals(1,b.getValor(2,1));
+        assertEquals(1,b.getValor(1,1));
+        assertEquals(1,b.getValor(1,2));
 
 }
 
@@ -77,9 +83,17 @@ public void entrar_piezaIzquierda(){
     Board b=new Board();
     b.piezaActiva=p;
     b.insertarPieza();
+    b.piezaActiva.setLado(1);
     b.piezaActiva.completarParedIzquierda();
-    b.piezaActiva.establecerPosicion(0,0); 
-    assertEquals(1,b.getValor());     
+    b.actualizarBoard0();
+    b.piezaActiva.establecerPosicion(0, 0);
+    b.actualizarBoard1();
+    assertEquals(1,b.getValor(1,1));   
+    assertEquals(1,b.getValor(1,1));  
+    assertEquals(1,b.getValor(1,1));  
+    assertEquals(1,b.getValor(2,1)); 
+
+      
 }
 
 
