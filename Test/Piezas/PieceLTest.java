@@ -6,7 +6,7 @@ import org.junit.Test;
 import Objetos.piezas.*;
 public class PieceLTest {
     @Test
-    public void Crear_PiezaL(){
+    public void Crear_PiezaL(){ 
         PieceLRight p=new PieceLRight();
         assertEquals( 1, p.getValorMatriz(1,0));
         assertEquals( 1, p.getValorMatriz(1,1));
