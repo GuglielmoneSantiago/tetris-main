@@ -1,9 +1,11 @@
 package Objetos.piezas;
-public class PieceT extends PieceBase {
-    public PieceT(){
+
+public class PieceLLeft extends PieceBase {
+    public PieceLLeft(){
         lado= (int)(Math.random()*3);
         lados();
-        }
+    }
+    
     @Override
     public void rotateLeft(){
         lado= lado-1;
@@ -14,6 +16,7 @@ public class PieceT extends PieceBase {
     }
     @Override
     public void rotateRight(){
+        
         lado= lado+1;
         if (lado>3){
             lado=0;
@@ -25,38 +28,35 @@ public class PieceT extends PieceBase {
         reset();
         switch(lado){
             case 0:
-                setValor1Matriz(0, 1);
+                setValor1Matriz(1, 0);
                 setValor1Matriz(1, 1);
                 setValor1Matriz(1, 2);
+                setValor1Matriz(0, 2);
+                altura=2;
+                break;
+            case 1: //izquierda
+                setValor1Matriz(0, 1);
+                setValor1Matriz(0, 2);
+                setValor1Matriz(1, 2);
+                setValor1Matriz(2, 2);
+                altura=2;
+                break;
+            case 2:
+                setValor1Matriz(0, 0);
+                setValor1Matriz(0, 1);
                 setValor1Matriz(1, 0);
+                setValor1Matriz(0, 2);
                 altura=1;
-                break;
-            case 1: //derecha
-                setValor1Matriz(1, 0);
-                setValor1Matriz(1, 1);
-                setValor1Matriz(2, 1);
-                setValor1Matriz(1, 2);
-                altura=2;
-                break;
-            case 2: //izq
-                setValor1Matriz(0, 1);
-                setValor1Matriz(1, 1);
-                setValor1Matriz(2, 1);
-                setValor1Matriz(1, 2);
-                altura=2;
                 break;  
-            case 3:
+            case 3: //derecha
                 setValor1Matriz(1, 0);
-                setValor1Matriz(1, 1);
-                setValor1Matriz(1, 2);
+                setValor1Matriz(2, 0);
                 setValor1Matriz(2, 1);
+                setValor1Matriz(2, 2);
                 altura=2;
                 break; 
         }
     }
-    
+}
 
-
- }
-        
 
